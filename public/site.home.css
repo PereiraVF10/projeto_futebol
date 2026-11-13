@@ -8,3 +8,9 @@
 body {
     background-color:antiquewhite;
 }
+
+.cabecalho {
+      background-color: #ffffff;
+    border-bottom: 2px solid #eaeaea;
+   
+}
