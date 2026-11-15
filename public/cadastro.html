@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meu Time</title>
+    <link rel="stylesheet" href="../public/css/cadastro_login.css">
 </head>
+
 <body>
-    
+
+    <header class="pag">
+
+        <div class="lado_esquerdo">
+
+            <div class="cabecalho">
+                <img src="../public/assets/icon/Marca Meu Time Stats (1).svg">
+                <a href="../public/site.home.html">Voltar ao início</a>
+            </div>
+
+            <div class="campos">
+
+                <div class="titulo">
+                    <span>O FUTEBOL VIVE AQUI</span>
+                    <h1>ENTRE PARA O TIME</h1>
+                    <p>Crie a sua conta para ver o desempenho <br> do seu próprio time na temporada</p>
+                </div>
+
+                <div class="grupo_ipt">
+                    <p class="txt_ipt">Nome</p>
+                    <input type="text" id="nome">
+                </div>
+                <div class="grupo_ipt">
+                    <p class="txt_ipt">E-mail</p>
+                    <input type="text" id="email">
+                </div>
+                <div class="grupo_ipt">
+                    <p class="txt_ipt">Senha</p>
+                    <input type="text" id="senha">
+                </div>
+                <div class="grupo_ipt">
+                    <p class="txt_ipt">Confirmar senha</p>
+                    <input type="text" id="confirmar">
+                </div>
+
+                <div class="grupo_ipt">
+                    <button onclick="criar()" class="btn_criar">Criar conta<img
+                            src="../public/assets/icon/pelota.svg"></button>
+                </div>
+
+                <div class="grupo_ipt">
+                    <p>Já tenho conta. <a href="../public/login.html">Entrar</a>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="img1"><img src="../public/assets/imagem/pes21.webp"></div>
+    </header>
+
 </body>
+
 </html>

@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+    background-color: #E0E0E0;
+}
+
+.cabecalho {
+    background-color: #4CAF50;
+    border-bottom: 3px solid #76FF03;
+    z-index: 100;
+    position: sticky;
+    padding: 20px;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.nav_links {
+    display: flex;
+    gap: 50px;
+
+
+}
+
+.nav_links a {
+    text-decoration: none;
+    color: #ffff;
+    font-weight: 800;
+    font-size: 18px;
+
+}
+
+.nav_links a:hover {
+    color: #4e4f4e;
+
+}
+
+.btn_nav {
+    display: flex;
+    gap: 20px;
+    font-weight: 800;
+    font-size: 18px;
+
+
+}
+
+.btn_login {
+    text-decoration: none;
+    border-radius: 6px;
+    background-color: #08da2b;
+    color: #121212;
+    padding: 8px 18px;
+    transition: background 0.4s;
+
+}
+
+.btn_cadastro {
+    text-decoration: none;
+    border-radius: 6px;
+    background-color: #121212;
+    color: #ffff;
+    padding: 8px 18px;
+    transition: background 0.4s;
+
+}
+
+.btn_login:hover {
+    background-color: #76FF03;
+
+}
+
+.btn_cadastro:hover {
+    background-color: #4e4f4e;
+
+}
+
+/* --- FIM DO CABEÇALHO --- */

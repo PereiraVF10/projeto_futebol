@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+    background-color: #199a5e;
+}
+
+.pag {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+
+}
+
+.lado_esquerdo {
+    width: 50%;
+    height: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
+
+}
+
+.lado_esquerdo a {
+    font-weight: 800;
+    font-size: 14px;
+    text-decoration: none;
+    color: #ffff;
+    transition: background 0.4s;
+
+}
+
+.lado_esquerdo a:hover {
+    color: #ff0000;
+
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.cabecalho img {
+    margin-right: 10px;
+
+}
+
+.img1 {
+    height: 100%;
+    width: 50%;
+    border-left: 2px;
+    background-color: #121212;
+    padding-left: 5px;
+
+}
+
+.img1 img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+}
+
+.campos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 30px;
+    border: 3px solid #121212;
+    border-radius: 6px;
+    background-color: #f6f1e6;
+    padding: 10px;
+
+}
+
+.grupo_ipt {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+
+}
+
+.txt_ipt {
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.campos input {
+    padding: 12px 50px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.btn_criar {
+    display: flex;
+    border-radius: 6px;
+    padding: 12px 24px;
+    color: #ffff;
+    background-color: #199a5e;
+    font-size: 18px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.grupo_ipt a {
+    color: #199a5e;
+}
+
+.grupo_ipt a:hover {
+    color: #08da2b;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+
+}
+
+.titulo p {
+    display: flex;
+    font-size: 14px;
+}
+
+.titulo span {
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.titulo h1 {
+    display: flex;
+    color: #199a5e;
+    font-size: 32px;
+
+}
+
+.icons {
+    display: flex;
+    align-items: flex-end;
+    gap: 300px;
+}
