@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+    background-color: #f6f1e6;
+}
+
+.side-nav {
+    padding: 24px 14px;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    background-color: #199a5e;
+    color: #ffff;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 200px;
+    flex-shrink: 0;
+    height: 100vh;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    gap: 28px;
+
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 4px;
+
+}
+
+.titulo h1 {
+    line-height: 5px;
+
+}
+
+.titulo h1 img {
+    display: block;
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+
+}
+
+.titulo p {
+    font-size: 14px;
+
+}
+
+.options {
+    gap: 14px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.icons,
+.Sair {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #ffff;
+    cursor: pointer;
+
+}
+
+.icons img,
+.Sair img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+
+}
+
+.icons a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.Sair a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.icons:hover,
+.Sair:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+
+}
+
+.aba_dash {
+    display: block;
+    width: 100%;
+
+}
+
+.side-nav a.aba_dash.ativo {
+    border-radius: 2px;
+    padding: 2px 2px;
+     border: 2px solid #f6f1e6;
+}
