@@ -109,5 +109,57 @@ body {
 .side-nav a.aba_dash.ativo {
     border-radius: 2px;
     padding: 2px 2px;
-     border: 2px solid #f6f1e6;
+    border: 2px solid #f6f1e6;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.principal {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    padding: 20px 30px;
+    align-items: flex-start;
+
+}
+
+.kpi-principal {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+
+}
+
+.kpi {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: rgb(207, 207, 207);
+    height: 160px;
+    background-color: #16281F;
+    border: #16281F;
+    border-radius: 10px;
+    border-style: solid;
+    padding: 15px 10px;
+}
+
+.pag_dash {
+    display: flex;
+    flex-direction: row;
+    position: sticky;
 }
