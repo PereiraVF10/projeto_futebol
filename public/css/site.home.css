@@ -172,6 +172,21 @@ body {
 
 }
 
+.img3 {
+    display: flex;
+    gap: 20px;
+
+}
+
+.img3 img {
+    width: 350px;
+    height: 480px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid #121212;
+
+}
+
 .btn_inicio {
     border-radius: 6px;
     text-decoration: none;
@@ -203,7 +218,7 @@ body {
 
 .bloco_card {
     display: flex;
-    gap: 30px;
+    gap: 20px;
     flex-direction: column;
     margin-left: 50px;
     flex: 1;
@@ -245,6 +260,191 @@ body {
 
 }
 
-.card_topo p,h4 {
+.card_topo p,
+span {
     color: #ffff;
 }
+
+.card_topo h4 {
+    color: #08da2b;
+}
+
+.lista_passos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid #121212;
+
+}
+
+.passo_item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid #121212;
+
+}
+
+.passo_numero {
+    font-size: 28px;
+    font-weight: bold;
+    color: #199a5e;
+    line-height: 1.1;
+}
+
+.passo_texto {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.passo_texto h4 {
+    color: #121212;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.passo_texto p {
+    color: #4e4f4e;
+    font-size: 15px;
+    margin: 0;
+}
+
+.passo_texto a {
+    text-decoration: none;
+
+}
+
+.barra_pontuacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e4ebe0;
+    padding: 14px 20px;
+    margin-top: 20px;
+    font-size: 13px;
+
+}
+
+.pontuacao_titulo {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: #199a5e;
+
+}
+
+.pontuacao_valores {
+    display: flex;
+    gap: 25px;
+
+}
+
+.pontuacao_valores span {
+    color: #4e5d52;
+
+}
+
+.pontuacao_valores strong {
+    color: #1e2d24;
+}
+
+.rodape {
+    display: flex;
+    background-color: #199a5e;
+    margin-top: 50px;
+    flex-direction: column;
+}
+
+.rodape {
+    background-color: #0d3822; /* Verde escuro do Figma */
+    color: #ffff;
+    padding: 50px 40px;
+    margin-top: 80px;
+    
+}
+
+.rodape_conteudo {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.rodape_superior {
+    display: flex;
+    align-items: flex-start;
+    gap: 150px;
+    margin-bottom: 40px;
+}
+
+.rodape_frase {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.rodape_frase h2 {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #ffff;
+}
+
+.rodape_msg {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+}
+
+.rodape_msg p {
+    font-size: 14px;
+    color: #ffff;
+    line-height: 1.5;
+}
+
+.rodape_divisor {
+    width: 100%;
+    height: 1px;
+    background-color: #199a5e; /* Linha divisória sutil */
+    margin-bottom: 40px;
+}
+
+.rodape_inferior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.rodape_logo img {
+    height: 50px;
+}
+
+.rodape_links {
+    display: flex;
+    gap: 25px;
+}
+
+.rodape_links a {
+    color: #ffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.rodape_links a:hover {
+    color: #08da2b;
+}
+
+.rodape_creditos {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #ffff;
+    border-top: 1px solid #14442b;
+    padding-top: 20px;
+}
+
