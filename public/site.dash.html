@@ -4,78 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/site.dash.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./js/Dash.js" defer></script>
+    <link rel="stylesheet" href="../css/site.dash.css">
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/dash.js" defer></script>
     <title>Meu Time</title>
 </head>
 
 <body>
-    <section id="main">
+    <div class="side-nav">
+        <div class="titulo">
+            <h1><img src="../assets/icon/Marca Meu Time Stats (1).svg" alt="Meu time"></h1>
+            <p>Desempenho da temporada</p>
+        </div>
+        <div class="options">
+            <div class="icons">
+                <img src="../assets/icon/perfil.svg">
+                <a href="perfil.html" class="aba_dash">Perfil</a>
+            </div>
+            <div class="icons">
+                <img src="../assets/icon/Icon_dash.svg">
+                <a href="site.dash.html" class="aba_dash ativo">DashBoard</a>
+            </div>
+            <div class="Sair">
+                <img src="../assets/icon/saida.svg">
+                <a href="login.html" class="aba_dash">Sair da conta</a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <main id="main" class="dashboard">
+
+        <div class="principal">
+            <h2>Olá, JOGADOR!</h2>
+            <p>Acompanhe o desempenho da temporada do seu time aqui</p>
+            <div class="kpi-principal">
+                <div class="kpi">
+                    <p>Quantidade de pontos</p>
+                    <strong><span>10 Pts</span></strong>
+                    <p>Total de pontos:</p>
+                </div>
+
+                <div class="kpi">
+                    <p>Saldo de gols</p>
+                    <strong><span>10 GP</span></strong>
+                    <p>Média de gols:</p>
+                </div>
+
+                <div class="kpi">
+                    <p>Quantidade de vitórias</p>
+                    <strong><span>3 V</span></strong>
+                    <p>Total de jogos:</p>
+                </div>
+
+                <div class="kpi">
+                    <p>Quantidade de empates</p>
+                    <strong><span>1 E</span></strong>
+                    <p>Total de jogos:</p>
+                </div>
+
+                <div class="kpi_derrota">
+                    <p>Quantidade de derrotas</p>
+                    <strong><span>3 D</span></strong>
+                    <p>Total de jogos:</p>
+                </div>
+            </div>
+
+        </div>
 
         <div class="pag_grafico">
 
-            <div class="pag_dash">
-                <div class="side-nav">
-                    <div class="titulo">
-                        <h1><img src="../public/assets/icon/Marca Meu Time Stats (1).svg" alt="Meu time"></h1>
-                        <p>Desempenho da temporada</p>
-                    </div>
-                    <div class="options">
-                        <div class="icons">
-                            <img src="../public/assets/icon/perfil.svg">
-                            <a href="perfil.html" class="aba_dash">Perfil</a>
-                        </div>
-                        <div class="icons">
-                            <img src="../public/assets/icon/Icon_dash.svg">
-                            <a href="site.dash.html" class="aba_dash ativo">DashBoard</a>
-                        </div>
-                        <div class="Sair">
-                            <img src="../public/assets/icon/saida.svg">
-                            <a href="login.html" class="aba_dash">Sair da conta</a>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="principal">
-                    <h2>Olá, JOGADOR!</h2>
-                    <p>Acompanhe o desempenho da temporada do seu time aqui</p>
-                    <div class="kpi-principal">
-                        <div class="kpi">
-                            <p>Quantidade de pontos</p>
-                            <strong><span>10 Pts</span></strong>
-                            <p>Total de pontos:</p>
-                        </div>
-
-                        <div class="kpi">
-                            <p>Saldo de gols</p>
-                            <strong><span>10 GP</span></strong>
-                            <p>Média de gols:</p>
-                        </div>
-
-                        <div class="kpi">
-                            <p>Quantidade de vitórias</p>
-                            <strong><span>3 V</span></strong>
-                            <p>Total de jogos:</p>
-                        </div>
-
-                        <div class="kpi">
-                            <p>Quantidade de empates</p>
-                            <strong><span>1 E</span></strong>
-                            <p>Total de jogos:</p>
-                        </div>
-
-                        <div class="kpi_derrota">
-                            <p>Quantidade de derrotas</p>
-                            <strong><span>3 D</span></strong>
-                            <p>Total de jogos:</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
 
             <div class="grafico-coluna">
                 <div class="grafico-cabecalho">
@@ -94,4 +93,8 @@
 
 
 
-    </section>
+    </main>
+
+</body>
+
+</html>

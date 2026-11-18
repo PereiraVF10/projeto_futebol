@@ -9,12 +9,14 @@ new Chart(ctx_gols, {
     type: 'bar',
     data: {
         labels: labels,
-        datasets: {
-            label: 'ctx_gols',
-            data: gol_pro,
-            borderWidth: 1,
-            borderColor: '#244A36',
-            backgroundColor: '#244A36'
-        }
+        datasets: [
+            {
+                label: 'ctx_gols',
+                data: gol_pro,
+                borderWidth: 1,
+                borderColor: '#244A36',
+                backgroundColor: '#244A36'
+            }
+        ]
     }
 });
