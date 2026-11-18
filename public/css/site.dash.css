@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    
+
 }
 
 .side-nav {
@@ -204,8 +204,9 @@ main {
 
 .pag_grafico {
     display: flex;
-    flex-direction: column;
-   
+    flex-direction: row;
+    gap: 20px;
+
 }
 
 .grafico-coluna {
@@ -218,6 +219,19 @@ main {
     justify-content: space-between;
     width: 100%;
     max-width: 600px;
+    height: 350px;
+}
+
+.grafico-pizza{
+    background-color: white;
+    border: 1px solid #dcd7cc;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 450px;
     height: 350px;
 }
 
@@ -258,4 +272,3 @@ main {
 .Indicadores h4 {
     opacity: 0.7;
 }
-

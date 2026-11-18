@@ -11,11 +11,33 @@ new Chart(ctx_gols, {
         labels: labels,
         datasets: [
             {
-                label: 'ctx_gols',
+                label: 'Saldo de gols',
                 data: gol_pro,
                 borderWidth: 1,
                 borderColor: '#244A36',
                 backgroundColor: '#244A36'
+            }
+        ]
+    }
+});
+
+// variáveis das partidas
+const jogos = ['Vitórias', 'Empates', 'Derrotas'];
+
+// Grafico donuts para quantidade de partidas com seu desempenho 
+const temporada = document.getElementById('jogos_dash');
+let game = [3, 1, 3];
+
+new Chart(temporada, {
+    type: 'doughnut',
+    data: {
+        labels: jogos,
+        datasets: [
+            {
+                label: 'partidas',
+                data: game,
+                backgroundColor: ['#199a5e', '#0048c5', '#b40000'],
+                hoverOffset: 4
             }
         ]
     }

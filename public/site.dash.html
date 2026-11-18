@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/site.dash.css">
-   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../js/dash.js" defer></script>
     <title>Meu Time</title>
 </head>
@@ -75,7 +75,6 @@
 
         <div class="pag_grafico">
 
-
             <div class="grafico-coluna">
                 <div class="grafico-cabecalho">
                     <div>
@@ -84,14 +83,25 @@
                     </div>
                 </div>
                 <div class="canvas-caixa">
-                    <canvas id="gols"></canvas> <!-- Mantém o ID que você já usa no seu JS -->
+                    <canvas id="gols"></canvas>
                 </div>
                 <p class="rodape-grafico-texto">Melhor marca: 3 gols nas partidas 4 e 8.</p>
             </div>
 
+            <div class="grafico-pizza">
+                <div class="grafico-cabecalho">
+                    <div>
+                        <h3>Total de partida</h3>
+                        <p>Vitórias, empates e derrotas que compõem o total de 14 partidas.</p>
+                    </div>
+                </div>
+                <div class="canvas-caixa">
+                    <canvas id="jogos_dash"></canvas>
+                </div>
+                <p class="rodape-grafico-texto">Total de pontos: 10 pts</p>
+            </div>
+
         </div>
-
-
 
     </main>
 
