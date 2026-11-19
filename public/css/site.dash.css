@@ -28,6 +28,7 @@ body {
     position: sticky;
     top: 0;
     gap: 28px;
+    border-right: 2px solid #121212;
 }
 
 .dashboard {
@@ -137,8 +138,8 @@ main {
     min-width: 0;
     display: flex;
     flex-direction: column;
-    margin-right: 20px;
-    padding: 20px 30px;
+    margin-right: 10px;
+    padding: 10px 10px;
     align-items: flex-start;
 
 }
@@ -148,18 +149,18 @@ main {
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 20px;
 
 }
 
 .kpi-principal p {
-    color: #ffff;
+    color: #121212;
     font-size: 16px;
 
 }
 
 .kpi-principal span {
-    color: #ffff;
+    color: #121212;
     font-size: 32px;
 
 }
@@ -174,13 +175,54 @@ main {
     align-items: center;
     justify-content: space-between;
     font-size: 14px;
-    color: rgb(207, 207, 207);
-    height: 160px;
-    background-color: #199a5e;
-    border: #16281F;
+    color: #121212;
+    height: 100px;
+    background-color: #ffff;
+    border: #121212;
     border-radius: 10px;
     border-style: solid;
-    padding: 15px 10px;
+    padding: 15px 15px;
+
+}
+
+.kpi_empate {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #121212;
+    height: 100px;
+    background-color: #ffff;
+    border: #121212;
+    border-radius: 10px;
+    border-style: solid;
+    padding: 15px 15px;
+
+}
+
+.kpi_pontos {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #121212;
+    height: 100px;
+    background-color: #199a5ec3;
+    border: #121212;
+    border-radius: 10px;
+    border-style: solid;
+    padding: 15px 15px;
+
 }
 
 .kpi_derrota {
@@ -193,19 +235,50 @@ main {
     align-items: center;
     justify-content: space-between;
     font-size: 14px;
-    color: rgb(207, 207, 207);
-    height: 160px;
-    background-color: #b40000;
+    color: #121212;
+    height: 100px;
+    background-color: #ce0505c9;
     border: #16281F;
     border-radius: 10px;
     border-style: solid;
     padding: 15px 10px;
 }
 
+.kpi, .kpi_derrota, .kpi_pontos, .kpi_empate {
+    position: relative; 
+}
+
+.kpi-barra {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 20px;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.kpi .kpi-barra {
+    background-color: #08da2b;
+}
+
+.kpi_empate .kpi-barra {
+    background-color: #ffd000;
+}
+
+.kpi_pontos .kpi-barra {
+    background-color: #08da2b;
+}
+
+
+.kpi_derrota .kpi-barra {
+    background-color: #ffd000;
+}
+
 .pag_grafico {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    justify-content: center;
 
 }
 
@@ -222,7 +295,7 @@ main {
     height: 350px;
 }
 
-.grafico-pizza{
+.grafico-pizza {
     background-color: white;
     border: 1px solid #dcd7cc;
     border-radius: 12px;
@@ -267,8 +340,4 @@ main {
     margin-top: 10px;
     border-top: 1px solid #f2f2f2;
     padding-top: 10px;
-}
-
-.Indicadores h4 {
-    opacity: 0.7;
 }

@@ -13,21 +13,33 @@ new Chart(ctx_gols, {
             {
                 label: 'Saldo de gols',
                 data: gol_pro,
-                borderWidth: 1,
-                borderColor: '#244A36',
-                backgroundColor: '#244A36'
+                borderWidth: 2,
+                borderColor: '#121212',
+                backgroundColor: '#199a5ec3'
             }
         ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                beginAtZero: true,
+                ticks: {
+                    stepSize: 1,
+                    precision: 0 
+                }
+            }
+        }
     }
 });
 
-// variáveis das partidas
+// Variáveis partidas para o gráfico 
 const jogos = ['Vitórias', 'Empates', 'Derrotas'];
-
-// Grafico donuts para quantidade de partidas com seu desempenho 
 const temporada = document.getElementById('jogos_dash');
 let game = [3, 1, 3];
 
+// Grafico donuts para quantidade de partidas com seu desempenho 
 new Chart(temporada, {
     type: 'doughnut',
     data: {
@@ -36,9 +48,20 @@ new Chart(temporada, {
             {
                 label: 'partidas',
                 data: game,
-                backgroundColor: ['#199a5e', '#0048c5', '#b40000'],
-                hoverOffset: 4
+                backgroundColor: ['#199a5ec3', '#d6da01', '#ce0505c9'],
+                hoverOffset: 3
             }
         ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'right',
+                align: 'end'
+            }
+        },
+        cutout: '50%'
     }
 });
