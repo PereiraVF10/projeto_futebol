@@ -9,7 +9,7 @@ body {
     background-color: #f6f1e6;
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
 
 }
 
@@ -34,7 +34,6 @@ body {
 .dashboard {
     flex: 1;
     min-width: 0;
-    height: 100vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -139,9 +138,21 @@ main {
     display: flex;
     flex-direction: column;
     margin-right: 10px;
-    padding: 10px 10px;
     align-items: flex-start;
+    margin-top: 20px;
 
+}
+
+.principal p {
+    color: #121212;
+    font-size: 20px;
+
+}
+
+
+.principal h2 {
+    color: #121212;
+    font-size: 32px;
 }
 
 .kpi-principal {
@@ -244,8 +255,11 @@ main {
     padding: 15px 10px;
 }
 
-.kpi, .kpi_derrota, .kpi_pontos, .kpi_empate {
-    position: relative; 
+.kpi,
+.kpi_derrota,
+.kpi_pontos,
+.kpi_empate {
+    position: relative;
 }
 
 .kpi-barra {
@@ -340,4 +354,55 @@ main {
     margin-top: 10px;
     border-top: 1px solid #f2f2f2;
     padding-top: 10px;
+}
+
+.registros_time {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.perfil_usuario {
+    background-color: white;
+    border: 1px solid #dcd7cc;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    height: 500px;
+
+}
+
+.time_usuario {
+    background-color: white;
+    border: 1px solid #dcd7cc;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    height: 500px;
+
+}
+
+.partidas_time {
+    background-color: white;
+    border: 1px solid #dcd7cc;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+
 }
