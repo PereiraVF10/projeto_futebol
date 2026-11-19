@@ -43,6 +43,52 @@
 
             <div class="perfil_usuario">
 
+                <div class="topo_bloco">
+                    <h2>Registrar nova partida</h2>
+                    <div class="campo_registro">
+                        <div>
+                            <p>Data da partida:</p>
+                            <input class="input_data" type="text" id="date">
+                        </div>
+                        <div>
+                            <p>Nome do adversário:</p>
+                            <input class="input_adv" type="text" id="fora">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topo2_bloco">
+                    <h2>Placar final</h2>
+                    <p>Informe os gols de cada time ao encerrar o jogo.</p>
+                    <div class="gols_registro">
+                        <div>
+                            <p>Gols do time:</p>
+                            <input class="input_gols" type="number" id="gols_pro">
+                        </div>
+                        <div>
+                            <p>Gols do adversário:</p>
+                            <input class="input_gols" type="number" id="gols_sofrido">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topo2_bloco">
+                    <h2>Resultado da partida</h2>
+                    <div class="gols_registro">
+                        <div>
+                            <p>Vitória</p>
+                        </div>
+                        <div>
+                            <p>Empate</p>
+                        </div>
+                        <div>
+                            <p>Derrota</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grupo_ipt">
+                    <button onclick="salvar()" class="btn_criar">Salvar partida +<img src="../assets/icon/pelota.svg"></button>
+                </div>
             </div>
 
             <div class="time_usuario">
@@ -50,14 +96,16 @@
             </div>
 
         </div>
-        
-        <div class="time_usuario">
+
+        <div class="bloco_partidas">
+
+            <div class="partidas_time">
+
+            </div>
 
         </div>
 
     </main>
-
-
 
 </body>
 

@@ -293,6 +293,7 @@ main {
     flex-direction: row;
     gap: 20px;
     justify-content: center;
+    margin-bottom: 50px;
 
 }
 
@@ -372,7 +373,6 @@ main {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 100%;
     max-width: 600px;
     height: 500px;
@@ -388,7 +388,7 @@ main {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     height: 500px;
 
 }
@@ -401,8 +401,106 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
-    max-width: 800px;
+    width: 160vh;
     height: 300px;
+    margin-bottom: 50px;
+
+}
+
+.bloco_partidas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bloco_pag {
+    display: flex;
+    align-items: center;
+}
+
+.topo_bloco {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.topo2_bloco {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+
+}
+
+.campo_registro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.gols_registro {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+
+}
+
+.input_adv {
+    display: flex;
+    width: 250px;
+
+}
+
+.input_data {
+    display: flex;
+    width: 100px;
+
+}
+
+.input_gols {
+    display: flex;
+    width: 50px;
+}
+
+.topo_bloco .topo2_bloco,
+input {
+    padding: 12px 50px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+
+}
+
+.topo2_bloco input {
+    padding: 25px 100px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 32px;
+
+}
+
+.grupo_ipt {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+
+}
+
+.btn_criar {
+    display: flex;
+    border-radius: 6px;
+    padding: 12px 24px;
+    color: #ffff;
+    background-color: #199a5e;
+    font-size: 18px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 
 }
