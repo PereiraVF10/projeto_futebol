@@ -376,7 +376,8 @@ main {
     width: 100%;
     max-width: 600px;
     height: 500px;
-
+    justify-content: space-between;
+    height: auto;
 }
 
 .time_usuario {
@@ -403,7 +404,7 @@ main {
     justify-content: center;
     width: 160vh;
     height: 300px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
 }
 
@@ -422,16 +423,19 @@ main {
 .topo_bloco {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 
 }
 
 .topo2_bloco {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin-top: 30px;
+    gap: 10px;
 
+}
+
+.topo2_bloco span {
+    color: #6e6f6e;
 }
 
 .campo_registro {
@@ -485,9 +489,10 @@ input {
 
 .grupo_ipt {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 5px;
     margin-top: 10px;
+    justify-content: flex-end;
 
 }
 
@@ -503,4 +508,51 @@ input {
     justify-content: center;
     gap: 30px;
 
+}
+
+.btn_criar img {
+    width: 18px;
+    height: 18px;
+}
+
+.ved_btn {
+    display: flex;
+    flex-direction: column;
+}
+
+.ved_btn button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card_resultado {
+    flex: 1;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.card_resultado.ativo {
+    border-color: #199a5e;
+    background-color: #f0f7f4;
+}
+
+.card_resultado .status_res {
+    font-size: 14px;
+    font-weight: bold;
+    color: #121212;
+}
+
+.card_resultado.ativo .status_res {
+    color: #199a5e;
+}
+
+.card_resultado .pontos_res {
+    font-size: 12px;
+    color: #6e6f6e;
 }

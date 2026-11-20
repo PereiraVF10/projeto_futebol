@@ -59,7 +59,7 @@
 
                 <div class="topo2_bloco">
                     <h2>Placar final</h2>
-                    <p>Informe os gols de cada time ao encerrar o jogo.</p>
+                    <span>Informe os gols de cada time ao encerrar o jogo.</span>
                     <div class="gols_registro">
                         <div>
                             <p>Gols do time:</p>
@@ -72,23 +72,35 @@
                     </div>
                 </div>
 
-                <div class="topo2_bloco">
-                    <h2>Resultado da partida</h2>
-                    <div class="gols_registro">
-                        <div>
-                            <p>Vitória</p>
+                <div class="ved_btn">
+
+                    <div class="topo2_bloco">
+                        <h2>Resultado da partida</h2>
+                        <div class="gols_registro">
+                            <div class="card_resultado ativo">
+                                <span class="status_res">✓ Vitória</span>
+                                <span class="pontos_res">+3 pontos</span>
+                            </div>
+                            <div class="card_resultado">
+                                <span class="status_res">Empate</span>
+                                <span class="pontos_res">+1 ponto</span>
+                            </div>
+                            <div class="card_resultado">
+                                <span class="status_res">Derrota</span>
+                                <span class="pontos_res">0 ponto</span>
+                            </div>
                         </div>
-                        <div>
-                            <p>Empate</p>
-                        </div>
-                        <div>
-                            <p>Derrota</p>
-                        </div>
+
                     </div>
+
+                    <div class="grupo_ipt">
+                        <button onclick="salvar()" class="btn_criar">Salvar partida +<img
+                                src="../assets/icon/pelota.svg"></button>
+                    </div>
+
                 </div>
-                <div class="grupo_ipt">
-                    <button onclick="salvar()" class="btn_criar">Salvar partida +<img src="../assets/icon/pelota.svg"></button>
-                </div>
+
+
             </div>
 
             <div class="time_usuario">
