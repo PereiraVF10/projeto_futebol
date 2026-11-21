@@ -10,6 +10,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 10px;
+   
 
 }
 
@@ -572,4 +573,10 @@ input {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 10px;
+}
+
+.historico_pt thead {
+    display: flex;
+    flex-direction: row;
+
 }
