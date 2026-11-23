@@ -18,7 +18,7 @@ var app = express();
 var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
 var timesRouter = require("./src/routes/times");
-var partidasRouter = require("./src/routes/partidas");
+var partidasRouter = require("./src/routes/partida");
 
 
 

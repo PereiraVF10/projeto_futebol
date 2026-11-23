@@ -17,7 +17,7 @@ function autenticar(req, res) {
                 }
 
                 var usuario = resultadoAutenticar[0];
-                req.session.idUsuario = usuario.id;
+                // req.session.idUsuario = usuario.id;
 
                 return res.json({
                     id: usuario.id,

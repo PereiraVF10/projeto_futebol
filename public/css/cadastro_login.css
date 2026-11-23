@@ -126,6 +126,12 @@ body {
     color: #08da2b;
 }
 
+.grupo_ipt p {
+    display: flex;
+    color: red;
+    margin-bottom: 10px;
+}
+
 .titulo {
     display: flex;
     flex-direction: column;
