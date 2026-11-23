@@ -94,6 +94,11 @@
             return false;
         }
 
+        if (!emailVar.includes('@') || emailVar.lenght() > 45 || emailVar.lenght() < 0) {
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            return false;
+        }
+
         if (senhaVar != confirmacaoSenhaVar) {
 
             mensagem_erro.innerHTML =
