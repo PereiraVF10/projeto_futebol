@@ -88,14 +88,10 @@
             senhaVar == "" ||
             confirmacaoSenhaVar == ""
         ) {
-            cardErro.style.display = "block";
             mensagem_erro.innerHTML =
                 "(Mensagem de erro para todos os campos em branco)";
 
-            finalizarAguardar();
             return false;
-        } else {
-            setInterval(sumirMensagem, 5000);
         }
 
         if (senhaVar != confirmacaoSenhaVar) {
@@ -121,7 +117,6 @@
                     console.log("resposta: ", resposta);
 
                     if (resposta.ok) {
-                        cardErro.style.display = "block";
 
                         mensagem_erro.innerHTML =
                             "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
@@ -130,15 +125,13 @@
                             window.location = "login.html";
                         }, "2000");
 
-                        limparFormulario();
-                        finalizarAguardar();
                     } else {
                         throw "Houve um erro ao tentar realizar o cadastro!";
                     }
                 })
                 .catch(function (resposta) {
                     console.log(`#ERRO: ${resposta}`);
-                    finalizarAguardar();
+                    mensagem_erro.textContent = "Não foi possível realizar o cadastro.";
                 });
 
             return false;
