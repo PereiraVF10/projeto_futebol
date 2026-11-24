@@ -43,15 +43,28 @@ function CarregarTime() {
 
             idTime = time.id_time;
             document.getElementById("casa").value = time.meu_team;
-
-            escolherEscudo(Number(time.escudo));
-            escolherCor(Number(time.cor_camisa));
-
             document.getElementById("nome_time_topo").textContent = time.meu_team;
-            document.getElementById("escudo_topo").src =
-                "/assets/icon/escudos/escudo-" + time.escudo + ".svg";
-            document.getElementById("camisa_topo").src =
-                "/assets/icon/camisas/camisa-" + time.cor_camisa + ".svg";
+
+            var numeroEscudo = Number(time.escudo);
+            var numeroCamisa = Number(time.cor_camisa);
+
+            escolherEscudo(numeroEscudo);
+            escolherCor(numeroCamisa);
+
+            var escudos = document.getElementById("opcoes_escudo").getElementsByTagName("img");
+            var camisas = document.getElementById("opcoes_camisa").getElementsByTagName("img");
+
+            var escudo = escudos[numeroEscudo - 1];
+            var camisa = camisas[numeroCamisa - 1];
+
+            if (escudo) {
+                document.getElementById("escudo_topo").src = escudo.src;
+            }
+
+            if (camisa) {
+                document.getElementById("camisa_topo").src = camisa.src;
+            }
+
             document.getElementById("time_topo").hidden = false;
         });
 }

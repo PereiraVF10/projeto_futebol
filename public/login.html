@@ -79,10 +79,10 @@
         // console.log("FORM LOGIN: ", emailVar);
         // console.log("FORM SENHA: ", senhaVar);
 
-        if (!emailVar.includes('@') || emailVar.lenght() > 45 || emailVar.lenght() < 0) {
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            return false;
-        }
+        // if (!emailVar.includes('@') || emailVar.lenght() > 45 || emailVar.lenght() < 0) {
+        //     mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+        //     return false;
+        // }
 
         fetch("/usuarios/autenticar", {
             method: "POST",
