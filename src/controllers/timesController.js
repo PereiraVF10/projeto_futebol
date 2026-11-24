@@ -1,48 +1,56 @@
-// var medidaModel = require("../models/medidaModel");
+var timesModel = require("../models/timesModel");
 
-// function buscarUltimasMedidas(req, res) {
+function buscarTime(req, res) {
+    var idUsuario = Number(req.params.idUsuario);
 
-//     const limite_linhas = 7;
+    if (!Number.isInteger(idUsuario) || idUsuario <= 0) {
+        return res.status(400).send("Usuário inválido.");
+    }
 
-//     var idAquario = req.params.idAquario;
+    timesModel.buscarTime(idUsuario)
+        .then(function (resultado) {
+            return res.json(resultado[0] || null);
+        })
+        .catch(function (erro) {
+            console.log(erro);
+            return res.status(500).send("Não foi possível buscar o time.");
+        });
+}
 
-//     console.log(`Recuperando as ultimas ${limite_linhas} medidas`);
+function salvarTime(req, res) {
+    var idUsuario = Number(req.params.idUsuario);
+    var dados = req.body || {};
+    var meuTeam = dados.meuTeam;
+    var corCamisa = Number(dados.corCamisa);
+    var escudo = Number(dados.escudo);
 
-//     medidaModel.buscarUltimasMedidas(idAquario, limite_linhas).then(function (resultado) {
-//         if (resultado.length > 0) {
-//             res.status(200).json(resultado);
-//         } else {
-//             res.status(204).send("Nenhum resultado encontrado!")
-//         }
-//     }).catch(function (erro) {
-//         console.log(erro);
-//         console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
-//         res.status(500).json(erro.sqlMessage);
-//     });
-// }
+    if (!Number.isInteger(idUsuario) || idUsuario <= 0) {
+        return res.status(400).send("Usuário inválido.");
+    }
 
+    if (typeof meuTeam !== "string" || meuTeam.trim() === "" || meuTeam.trim().length > 45) {
+        return res.status(400).send("Informe um nome com até 45 caracteres.");
+    }
 
-// function buscarMedidasEmTempoReal(req, res) {
+    if (!Number.isInteger(corCamisa) || corCamisa < 1 || corCamisa > 4) {
+        return res.status(400).send("Escolha uma cor de camisa.");
+    }
 
-//     var idAquario = req.params.idAquario;
+    if (!Number.isInteger(escudo) || escudo < 1 || escudo > 5) {
+        return res.status(400).send("Escolha um escudo.");
+    }
 
-//     console.log(`Recuperando medidas em tempo real`);
+    timesModel.salvarTime(meuTeam.trim(), corCamisa, escudo, idUsuario)
+        .then(function () {
+            return res.json({ mensagem: "Time salvo." });
+        })
+        .catch(function (erro) {
+            console.log(erro);
+            return res.status(500).send("Não foi possível salvar o time.");
+        });
+}
 
-//     medidaModel.buscarMedidasEmTempoReal(idAquario).then(function (resultado) {
-//         if (resultado.length > 0) {
-//             res.status(200).json(resultado);
-//         } else {
-//             res.status(204).send("Nenhum resultado encontrado!")
-//         }
-//     }).catch(function (erro) {
-//         console.log(erro);
-//         console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
-//         res.status(500).json(erro.sqlMessage);
-//     });
-// }
-
-// module.exports = {
-//     buscarUltimasMedidas,
-//     buscarMedidasEmTempoReal
-
-// }
+module.exports = {
+    buscarTime,
+    salvarTime
+};

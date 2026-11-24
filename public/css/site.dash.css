@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 10px;
-   
+
 
 }
 
@@ -559,10 +559,6 @@ input {
     color: #121212;
 }
 
-.card_resultado.ativo .status_res {
-    color: #199a5e;
-}
-
 .card_resultado .pontos_res {
     font-size: 12px;
     color: #6e6f6e;
@@ -575,8 +571,76 @@ input {
     margin-top: 10px;
 }
 
-.historico_pt thead {
-    display: flex;
+.principal_perfil {
+    flex: 0 0 auto;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 20px 20px 0 0;
+}
 
+.time_topo:not([hidden]) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.time_usuario {
+    height: auto;
+}
+
+.opcoes_time {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.opcoes_time button {
+    padding: 6px;
+    border: 2px solid #dcd7cc;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.opcoes_time button.ativo {
+    border-color: #199a5e;
+    background-color: #f0f7f4;
+}
+
+.opcoes_time img {
+    display: block;
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.partidas_time {
+    box-sizing: border-box;
+    width: calc(100% - 40px);
+    height: auto;
+}
+
+.historico_pt {
+    display: block;
+    overflow-x: auto;
+}
+
+.tabela_registro {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela_registro th,
+.tabela_registro td {
+    padding: 8px;
+    border-bottom: 1px solid #dcd7cc;
+    text-align: left;
+}
+
+.imagem_time_topo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
 }

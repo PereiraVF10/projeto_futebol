@@ -1,14 +1,13 @@
-// var express = require("express");
-// var router = express.Router();
+var express = require("express");
+var router = express.Router();
+var timesController = require("../controllers/timesController");
 
-// var medidaController = require("../controllers/medidaController");
+router.get("/buscar/:idUsuario", function (req, res) {
+    timesController.buscarTime(req, res);
+});
 
-// router.get("/ultimas/:idAquario", function (req, res) {
-//     medidaController.buscarUltimasMedidas(req, res);
-// });
+router.post("/salvar/:idUsuario", function (req, res) {
+    timesController.salvarTime(req, res);
+});
 
-// router.get("/tempo-real/:idAquario", function (req, res) {
-//     medidaController.buscarMedidasEmTempoReal(req, res);
-// })
-
-// module.exports = router;
+module.exports = router;

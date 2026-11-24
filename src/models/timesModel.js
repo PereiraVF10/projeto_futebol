@@ -1,33 +1,29 @@
-// var database = require("../database/config");
+var database = require("../database/config");
 
-// function buscarUltimasMedidas(idAquario, limite_linhas) {
+function buscarTime(idUsuario) {
+    var instrucaoSql = `
+        SELECT id_time, meu_team, cor_camisa, escudo
+        FROM time
+        WHERE fk_usuario = ?;
+    `;
 
-//     var instrucaoSql = `SELECT 
-//                         temperatura,
-//                         momento,
-//                         DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico
-//                     FROM medida
-//                     WHERE fk_aquario = ${idAquario}
-//                     ORDER BY id DESC LIMIT ${limite_linhas}`;
+    return database.executar(instrucaoSql, [idUsuario]);
+}
 
-//     console.log("Executando a instrução SQL: \n" + instrucaoSql);
-//     return database.executar(instrucaoSql);
-// }
+function salvarTime(meuTeam, corCamisa, escudo, idUsuario) {
+    var instrucaoSql = `
+        INSERT INTO time (meu_team, cor_camisa, escudo, fk_usuario)
+        VALUES (?, ?, ?, ?)
+        ON DUPLICATE KEY UPDATE meu_team = ?, cor_camisa = ?, escudo = ?;
+    `;
 
-// function buscarMedidasEmTempoReal(idAquario) {
+    return database.executar(instrucaoSql, [
+        meuTeam, corCamisa, escudo, idUsuario,
+        meuTeam, corCamisa, escudo
+    ]);
+}
 
-//     var instrucaoSql = `SELECT 
-//                         temperatura,
-//                         DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico, 
-//                         fk_aquario 
-//                         FROM medida WHERE fk_aquario = ${idAquario} 
-//                     ORDER BY id DESC LIMIT 1`;
-
-//     console.log("Executando a instrução SQL: \n" + instrucaoSql);
-//     return database.executar(instrucaoSql);
-// }
-
-// module.exports = {
-//     buscarUltimasMedidas,
-//     buscarMedidasEmTempoReal
-// }
+module.exports = {
+    buscarTime,
+    salvarTime
+};
