@@ -197,6 +197,10 @@ main {
 
 }
 
+.kpi #media_gols {
+    font-size: 14px;
+}
+
 .kpi_empate {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
@@ -235,6 +239,10 @@ main {
     border-style: solid;
     padding: 15px 15px;
 
+}
+
+.kpi_pontos #total_pts {
+    font-size: 14px;
 }
 
 .kpi_derrota {
@@ -503,9 +511,11 @@ input {
     flex-direction: row;
     gap: 5px;
     margin-top: 10px;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
 
 }
+
 
 .btn_criar {
     display: flex;
