@@ -74,8 +74,8 @@
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
-        var nomeVar = nome.value;
-        var emailVar = email.value;
+        var nomeVar = nome.value.trim();
+        var emailVar = email.value.trim().toLowerCase();
         var senhaVar = senha.value;
         var confirmacaoSenhaVar = confirmar.value;
 
@@ -94,54 +94,85 @@
             return false;
         }
 
-        if (!emailVar.includes('@') || emailVar.lenght() > 45 || emailVar.lenght() < 0) {
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+        if (nomeVar.length < 3 || nomeVar.length > 50) {
+            mensagem_erro.textContent = "O nome deve ter entre 3 e 50 caracteres.";
+            return false;
+        }
+
+        if (!emailVar.includes('@') || emailVar.length < 5 || emailVar.length > 50 || !emailVar.endsWith(".com")) {
+            mensagem_erro.innerHTML = `O e-mail deve ter entre 5 e 50 caracteres. <br>
+            Precisa incluir @ e terminar como: .com <br>
+            Exemplo: victor@email.com`;
+            return false;
+        }
+
+        if (senhaVar.length < 8 || senhaVar.length > 50) {
+            mensagem_erro.textContent = "A senha deve ter entre 8 e 50 caracteres.";
+            return false;
+        }
+
+        if (!senhaVar.includes("@") && !senhaVar.includes("!") && !senhaVar.includes("#") && !senhaVar.includes("$") &&
+            !senhaVar.includes("%") && !senhaVar.includes("&") && !senhaVar.includes("*") && !senhaVar.includes("?")) {
+
+            mensagem_erro.textContent =
+                "A senha precisa ter pelo menos um destes símbolos: ! @ # $ % & * ?";
+            return false;
+        }
+
+        if (!senhaVar.includes("0") && !senhaVar.includes("1") && !senhaVar.includes("2") && !senhaVar.includes("3") &&
+            !senhaVar.includes("4") && !senhaVar.includes("5") && !senhaVar.includes("6") && !senhaVar.includes("7") &&
+            !senhaVar.includes("8") && !senhaVar.includes("9")) {
+
+            mensagem_erro.textContent = "A senha precisa ter pelo menos um número.";
             return false;
         }
 
         if (senhaVar != confirmacaoSenhaVar) {
-
-            mensagem_erro.innerHTML =
-                "(Mensagem de erro para campo senha diferente de confirmação de senha)";
-        } else {
-            // Enviando o valor da nova input
-            fetch("/usuarios/cadastrar", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    // crie um atributo que recebe o valor recuperado aqui
-                    // Agora vá para o arquivo routes/usuario.js
-                    nomeServer: nomeVar,
-                    emailServer: emailVar,
-                    senhaServer: senhaVar,
-                }),
-            })
-                .then(function (resposta) {
-                    console.log("resposta: ", resposta);
-
-                    if (resposta.ok) {
-
-                        mensagem_erro.innerHTML =
-                            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-                        setTimeout(() => {
-                            window.location = "login.html";
-                        }, "2000");
-
-                    } else {
-                        throw "Houve um erro ao tentar realizar o cadastro!";
-                    }
-                })
-                .catch(function (resposta) {
-                    console.log(`#ERRO: ${resposta}`);
-                    mensagem_erro.textContent = "Não foi possível realizar o cadastro.";
-                });
-
+            mensagem_erro.innerHTML = `As senhas precisam ser iguais`;
             return false;
-
         }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.status === 409) {
+                    mensagem_erro.textContent = "Este e-mail já está cadastrado. Entre na sua conta.";
+                    return;
+                }
+
+                if (resposta.ok) {
+
+                    mensagem_erro.innerHTML =
+                        "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                    setTimeout(() => {
+                        window.location = "login.html";
+                    }, "2000");
+
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                mensagem_erro.textContent = "Não foi possível realizar o cadastro.";
+            });
+
+        return false;
 
     }
 </script>

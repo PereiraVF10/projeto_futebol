@@ -63,6 +63,10 @@ function cadastrar(req, res) {
                         "\nHouve um erro ao realizar o cadastro! Erro: ",
                         erro.sqlMessage
                     );
+                    if (erro.code === "ER_DUP_ENTRY") {
+                        return res.status(409).send("Este e-mail já está cadastrado.");
+                    }
+                    
                     res.status(500).json(erro.sqlMessage);
                 }
             );

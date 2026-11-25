@@ -66,7 +66,7 @@
 
     function conta() {
 
-        var emailVar = email.value;
+        var emailVar = email.value.trim().toLowerCase();
         var senhaVar = senha.value;
 
         mensagem_erro.textContent = "";
@@ -79,10 +79,6 @@
         // console.log("FORM LOGIN: ", emailVar);
         // console.log("FORM SENHA: ", senhaVar);
 
-        // if (!emailVar.includes('@') || emailVar.lenght() > 45 || emailVar.lenght() < 0) {
-        //     mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-        //     return false;
-        // }
 
         fetch("/usuarios/autenticar", {
             method: "POST",
@@ -94,36 +90,26 @@
                 senhaServer: senhaVar
             })
         }).then(function (resposta) {
-            console.log("ESTOU NO THEN DO entrar()!")
-
-            if (resposta.ok) {
-                console.log(resposta);
-
-                resposta.json().then(json => {
-                    console.log(json);
-                    console.log(JSON.stringify(json));
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
-
-                    setTimeout(function () {
-                        window.location = "perfil.html";
-                    }, 1000); // apenas para exibir o loading
-
-                });
-
-            } else {
-
-                console.log("Houve um erro ao tentar realizar o login!");
-
-                resposta.text().then(texto => {
-                    console.error(texto);
-                });
+            if (resposta.status === 403) {
+                mensagem_erro.textContent = "E-mail ou senha incorretos.";
+                return;
             }
 
+            if (!resposta.ok) {
+                mensagem_erro.textContent = "Não foi possível entrar. Tente novamente.";
+                return;
+            }
+
+            return resposta.json().then(function (usuario) {
+                sessionStorage.EMAIL_USUARIO = usuario.email;
+                sessionStorage.NOME_USUARIO = usuario.nome;
+                sessionStorage.ID_USUARIO = usuario.id;
+
+                window.location = "perfil.html";
+            });
         }).catch(function (erro) {
             console.log(erro);
-            mensagem_erro.textContent = texto || "Não foi possível entrar.";
+            mensagem_erro.textContent = texto || "Não foi possível entrar. Tente novamente";
         })
 
         return false;
