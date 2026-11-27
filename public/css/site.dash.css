@@ -626,8 +626,7 @@ input {
 
 .historico_pt {
     width: 100%;
-    border-collapse: collapse;
-    
+
 }
 
 .historico_pt th,
@@ -635,9 +634,7 @@ input {
     padding: 12px 8px;
     border-bottom: 1px solid #dcd7cc;
     text-align: left;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+
 }
 
 .historico_pt #corpo_historico {
