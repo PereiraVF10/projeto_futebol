@@ -72,14 +72,14 @@
                     <div class="gols_registro">
                         <div>
                             <p>Gols do time:</p>
-                            <input class="input_gols" type="number" id="gols_pro">
+                            <input class="input_gols" type="number" min="0" id="gols_pro">
                         </div>
                         <div>
                             <p>X</p>
                         </div>
                         <div>
                             <p>Gols do adversário:</p>
-                            <input class="input_gols" type="number" id="gols_sofrido">
+                            <input class="input_gols" type="number" min="0" id="gols_sofrido">
                         </div>
                     </div>
                 </div>
@@ -170,7 +170,6 @@
         </div>
 
         <div class="bloco_partidas">
-
             <div class="partidas_time">
                 <h2>Histórico das partidas</h2>
 
@@ -185,13 +184,12 @@
                             <th>Gols</th>
                         </tr>
                     </thead>
-                    <tbody id="corpo_historico"></tbody>
+                    <tbody id="corpo_historico">
+                    </tbody>
                 </table>
+
                 <p id="mensagem_historico"></p>
-
-
             </div>
-
         </div>
 
     </main>

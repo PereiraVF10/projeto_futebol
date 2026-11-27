@@ -574,13 +574,6 @@ input {
     color: #6e6f6e;
 }
 
-.historico_pt {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
 .principal_perfil {
     flex: 0 0 auto;
     flex-direction: row;
@@ -621,36 +614,43 @@ input {
 
 .opcoes_time img {
     display: block;
-    width: 36px;
-    height: 36px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
 }
 
 .partidas_time {
     box-sizing: border-box;
-    width: calc(100% - 40px);
     height: auto;
 }
 
 .historico_pt {
-    display: block;
-    overflow-x: auto;
-}
-
-.tabela_registro {
     width: 100%;
     border-collapse: collapse;
+    
 }
 
-.tabela_registro th,
-.tabela_registro td {
-    padding: 8px;
+.historico_pt th,
+.historico_pt td {
+    padding: 12px 8px;
     border-bottom: 1px solid #dcd7cc;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.historico_pt #corpo_historico {
     text-align: left;
 }
 
+#mensagem_historico {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
 .imagem_time_topo {
-    width: 36px;
-    height: 36px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
 }
